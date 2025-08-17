@@ -1,9 +1,9 @@
 namespace FactoryDesignPattern.WithFactoryDesignPattern
 {
-    public class CustomGroups
+    public class CustomGroupsClient
     {
         private readonly CustomGroupFactory _customGroupFactory;
-        public CustomGroups(CustomGroupFactory customGroupFactory)
+        public CustomGroupsClient(CustomGroupFactory customGroupFactory)
         {
             _customGroupFactory = customGroupFactory;
         }
@@ -20,7 +20,7 @@ namespace FactoryDesignPattern.WithFactoryDesignPattern
         public static void Main(string[] args)
         {
             CustomGroupFactory customGroupFactory = new CustomGroupFactory();
-            CustomGroups customGroups = new CustomGroups(customGroupFactory);
+            CustomGroupsClient customGroups = new CustomGroupsClient(customGroupFactory);
 
             ICustomGroups adminGroup = customGroups.CustomGroupOperations("admin");
 

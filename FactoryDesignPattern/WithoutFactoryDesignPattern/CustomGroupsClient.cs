@@ -1,6 +1,6 @@
 namespace FactoryDesignPattern.WithoutFactoryDesignPattern
 {
-    public class CustomGroups
+    public class CustomGroupsClient
     {
         public ICustomGroups CustomGroupOperations(string userType)
         {
@@ -19,7 +19,7 @@ namespace FactoryDesignPattern.WithoutFactoryDesignPattern
 
         public static void Main(string[] args)
         {
-            CustomGroups customGroups = new CustomGroups();
+            CustomGroupsClient customGroups = new CustomGroupsClient();
 
             ICustomGroups adminGroup = customGroups.CustomGroupOperations("admin");
             adminGroup.Add();
